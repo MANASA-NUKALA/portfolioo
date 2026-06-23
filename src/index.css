@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #07070b;
+  --bg-elev: #0c0c14;
+  --text: #f3f3f7;
+  --muted: #9a9aae;
+  --faint: #6f6f82;
+  --card: rgba(255, 255, 255, 0.035);
+  --card-hover: rgba(255, 255, 255, 0.065);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --accentA: #8b7bff;
+  --accentB: #4f8dff;
+  --accent-soft: rgba(139, 123, 255, 0.13);
+  --glowA: rgba(110, 80, 255, 0.30);
+  --glowB: rgba(40, 90, 210, 0.22);
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+  --field: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme='light'] {
+  --bg: #f4f5fb;
+  --bg-elev: #ffffff;
+  --text: #13131c;
+  --muted: #56566a;
+  --faint: #8a8a9c;
+  --card: rgba(20, 20, 45, 0.035);
+  --card-hover: rgba(20, 20, 45, 0.06);
+  --border: rgba(20, 20, 45, 0.10);
+  --border-strong: rgba(20, 20, 45, 0.20);
+  --accentA: #6a52ff;
+  --accentB: #2f6dff;
+  --accent-soft: rgba(106, 82, 255, 0.10);
+  --glowA: rgba(120, 90, 255, 0.20);
+  --glowB: rgba(60, 110, 235, 0.16);
+  --shadow: 0 24px 60px rgba(40, 40, 90, 0.14);
+  --field: rgba(20, 20, 45, 0.04);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Manrope', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s ease;
+}
+
+::selection { background: rgba(139, 123, 255, 0.32); color: #fff; }
+
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 140, 255, 0.22);
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.gradient-text {
+  background: linear-gradient(110deg, var(--accentA), var(--accentB));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(46px, -34px) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes drift2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 30px) scale(1.12); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+input::placeholder,
+textarea::placeholder { color: var(--faint); }
