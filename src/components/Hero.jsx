@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiDownload } from 'react-icons/fi'
-import { PROFILE } from '../data'
+import { PROFILE, RESUME } from '../data'
 
 function useTypewriter(words, typeSpeed = 95, deleteSpeed = 45, pause = 1500) {
   const [text, setText] = useState('')
@@ -83,7 +83,7 @@ export default function Hero() {
           <a href="#contact" className="inline-flex items-center gap-2 rounded-xl px-[26px] py-[13px] text-[15px] font-semibold no-underline" style={{ color: 'var(--text)', background: 'var(--card)', border: '1px solid var(--border-strong)' }}>
             Contact Me
           </a>
-          <a href="/resume.pdf" download className="inline-flex items-center gap-2 rounded-xl px-[26px] py-[13px] text-[15px] font-semibold no-underline" style={{ color: 'var(--muted)', background: 'transparent', border: '1px solid var(--border)' }}>
+          <a href={RESUME.path} download={RESUME.fileName} className="inline-flex items-center gap-2 rounded-xl px-[26px] py-[13px] text-[15px] font-semibold no-underline" style={{ color: 'var(--muted)', background: 'transparent', border: '1px solid var(--border)' }}>
             <FiDownload /> Download Resume
           </a>
         </div>

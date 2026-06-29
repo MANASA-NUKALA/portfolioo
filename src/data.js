@@ -23,14 +23,14 @@ export const CATEGORIES = ['All', 'MERN', 'AI / ML', 'Computer Vision']
 
 export const PROJECTS = [
   {
-    name: 'BloodBridge',
+    name: 'PlasticSwap',
     tag: 'MERN',
     cats: ['MERN'],
-    github: 'https://github.com/MANASA-NUKALA/BloodBridge',
-    live: '',
-    desc: 'A MERN stack blood donation platform connecting donors and recipients. Register as a donor, search for blood, and manage requests through a responsive interface.',
+    github: 'https://github.com/MANASA-NUKALA/PLASTIC-SWAP',
+    live: 'https://plastic-swap.vercel.app/',
+    desc: 'A MERN stack sustainability platform promoting plastic waste exchange and recycling initiatives through a modern web application.',
     tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
-    features: ['Donor registration', 'Blood requests', 'Search functionality', 'Responsive UI'],
+    features: ['Plastic listing management', 'Recycling awareness', 'User dashboard', 'Responsive design'],
   },
   {
     name: 'RaithuBuddy',
@@ -43,14 +43,14 @@ export const PROJECTS = [
     features: ['User registration and login', 'Secure authentication', 'Farmer-friendly dashboard', 'Crop-related information', 'Government scheme information', 'Weather updates', 'Product listings', 'Contact/support section'],
   },
   {
-    name: 'PlasticSwap',
+    name: 'BloodBridge',
     tag: 'MERN',
     cats: ['MERN'],
-    github: 'https://github.com/MANASA-NUKALA/PLASTIC-SWAP',
-    live: 'https://plastic-swap.vercel.app/',
-    desc: 'A MERN stack sustainability platform promoting plastic waste exchange and recycling initiatives through a modern web application.',
+    github: 'https://github.com/MANASA-NUKALA/BloodBridge',
+    live: '',
+    desc: 'A MERN stack blood donation platform connecting donors and recipients. Register as a donor, search for blood, and manage requests through a responsive interface.',
     tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
-    features: ['Plastic listing management', 'Recycling awareness', 'User dashboard', 'Responsive design'],
+    features: ['Donor registration', 'Blood requests', 'Search functionality', 'Responsive UI'],
   },
   {
     name: 'Warehouse Box Counter',
@@ -73,6 +73,6 @@ export const CERTIFICATIONS = [
 ]
 
 export const RESUME = {
-  path: '/resume/Manasa Nukala resume (2).pdf',
-  fileName: 'Manasa Nukala resume (2).pdf',
+  path: '/resume/Manasa_resume(Fullstack).pdf',
+  fileName: 'Manasa_resume(Fullstack).pdf',
 }
