@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { FiArrowUpRight, FiExternalLink } from 'react-icons/fi'
 import Reveal from './Reveal'
 import { PROJECTS, CATEGORIES } from '../data'
 
@@ -23,9 +23,18 @@ function ProjectCard({ p }) {
         <span className="rounded-[7px] px-[11px] py-[5px] font-mono text-[11px] tracking-[0.03em]" style={{ background: 'var(--accent-soft)', border: '1px solid var(--border)', color: 'var(--accentA)' }}>
           {p.tag}
         </span>
-        <a href={p.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-mono text-[12.5px] no-underline" style={{ color: 'var(--muted)' }}>
-          GitHub <FiArrowUpRight />
-        </a>
+        <div className="flex flex-wrap items-center gap-2.5">
+          {p.github ? (
+            <a href={p.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-mono text-[12.5px] no-underline" style={{ color: 'var(--muted)' }}>
+              GitHub <FiArrowUpRight />
+            </a>
+          ) : null}
+          {p.live ? (
+            <a href={p.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-mono text-[12.5px] no-underline" style={{ color: 'var(--muted)' }}>
+              Live <FiExternalLink />
+            </a>
+          ) : null}
+        </div>
       </div>
       <h3 className="m-0 mt-0.5 font-display text-[23px] font-semibold tracking-[-0.01em]">{p.name}</h3>
       <p className="m-0 text-[14.5px] leading-[1.65]" style={{ color: 'var(--muted)' }}>{p.desc}</p>
